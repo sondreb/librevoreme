@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overscroll-behavior: none;
+}
+
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
@@ -84,7 +88,7 @@ nav ul li a:hover {
 header {
     height: 100vh;
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
-                url('https://source.unsplash.com/random/1920x1080/?montenegro') center/cover;
+                url('background.jpg') center/cover;
     display: flex;
     align-items: center;
     text-align: center;
