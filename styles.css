@@ -158,7 +158,6 @@ section {
 }
 
 .about-intro {
-  text-align: center;
   margin-bottom: 3rem;
   font-size: 1.2rem;
   color: var(--dark);
@@ -259,6 +258,10 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     margin-top: 2rem;
+    justify-items: center; /* Centers items horizontally */
+    place-content: center; /* Centers the entire grid */
+    max-width: 1200px;
+    margin: 2rem auto 0;
 }
 
 .expert-card {
@@ -268,6 +271,7 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    max-width: 600px;
 }
 
 .expert-card:hover {
@@ -379,5 +383,64 @@ a:hover {
     nav ul li a {
         font-size: 1.5rem;
         color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.customers-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+    margin: 2rem 0 0;
+}
+
+.customers-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+.customer-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo-item {
+    width: 180px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.8) contrast(0.8);
+    transition: filter 0.3s ease;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%) brightness(1) contrast(1);
+}
+
+@media (max-width: 768px) {
+    .customer-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .logo-item {
+        width: 140px;
+        height: 60px;
     }
 }
