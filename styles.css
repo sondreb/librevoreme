@@ -125,6 +125,33 @@ section {
   transform: translateY(-5px);
 }
 
+.services-detailed {
+  background-color: var(--light);
+}
+
+.services-grid.detailed {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card.detailed {
+  padding: 2.5rem;
+  background: white;
+  height: 100%;
+}
+
+.service-card.detailed h3 {
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+}
+
+.service-card.detailed p {
+  color: #546e7a;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
 .about-content {
   max-width: 1000px;
   margin: 0 auto;
