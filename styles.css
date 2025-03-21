@@ -444,3 +444,85 @@ a:hover {
         height: 60px;
     }
 }
+
+
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.print {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .print {
+    display: block;
+  }
+
+  h3 {
+    /* margin-top: 3em; */
+    font-size: 1.5em;
+  }
+
+  /* footer {
+    margin-top: 2em;
+  } */
+
+  .print-smaller {
+    font-size: 0.7em;
+  }
+
+  .services-grid {
+    gap: 8px !important;
+  }
+
+  .service-card {
+    padding: 0.8em !important;
+    margin: 0 !important;
+  }
+
+  .about-image {
+    position: sticky;
+    top: 100px;
+  }
+  
+  .about-image img {
+    width: 100%;
+  }
+
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
+  }
+
+  .logo-item img {
+    filter: none;
+}
+
+.customers-section {
+  background: white;
+}
+/* 
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  } */
+
+  /* .about-image {
+    position: static;
+    order: -1;
+  } */
+}
